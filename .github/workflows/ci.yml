@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar código
-        uses: actions/checkout@v4
+    - name: Baixar código
+      uses: actions/checkout@v4
 
-      - name: Teste simples
-        run: echo "CI funcionando!"
+    - name: Instalar dependências
+      run: pip install -r requirements.txt
+
+    - name: Rodar testes
+      run: pytest
 
   message:
     runs-on: ubuntu-latest
