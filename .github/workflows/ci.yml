@@ -16,3 +16,12 @@ jobs:
 
       - name: Teste simples
         run: echo "CI funcionando!"
+
+  message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensagem para Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{"content": "CI rodou com sucesso 🚀"}' \
+          ${{secrets.DISCORD}}
