@@ -20,8 +20,10 @@ jobs:
   message:
     runs-on: ubuntu-latest
     steps:
-      - name: Enviar mensagem para Discord
-        run: |
-          curl -H "Content-Type: application/json" \
-          -d '{"content": "Boa demais "}' \
-          ${{secrets.DISCORD}}
+    - name: Enviar mensagem para Discord
+      run: |
+        curl -H "Content-Type: application/json" \
+        -d "{
+          \"content\": \"🚀 Novo commit!\n👤 Autor: ${{ github.actor }}\n📌 Mensagem: ${{ github.event.head_commit.message }}\n🌿 Branch: ${{ github.ref }}\"
+        }" \
+        ${{ secrets.DISCORD }}
