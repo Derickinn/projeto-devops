@@ -1,0 +1,19 @@
+from funcao import soma
+
+def test_soma_1():
+    assert soma(1, 1) == 2
+
+def test_soma_2():
+    assert soma(2, 3) == 5
+
+def test_soma_3():
+    assert soma(0, 0) == 0
+
+def test_soma_4():
+    assert soma(-1, 1) == 0
+
+def test_soma_5():
+    assert soma(10, 5) == 15
+
+def test_soma_6():
+    assert soma(20, 5) == 25
