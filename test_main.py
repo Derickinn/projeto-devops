@@ -14,3 +14,6 @@ def test_soma_4():
 
 def test_soma_5():
     assert soma(10, 5) == 15
+
+def test_soma_6():
+    assert soma(20, 5) == 25
