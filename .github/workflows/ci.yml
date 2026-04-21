@@ -23,5 +23,5 @@ jobs:
       - name: Enviar mensagem para Discord
         run: |
           curl -H "Content-Type: application/json" \
-          -d '{"content": "CI rodou com sucesso 🚀"}' \
+          -d '{"content": "Boa demais "}' \
           ${{secrets.DISCORD}}
